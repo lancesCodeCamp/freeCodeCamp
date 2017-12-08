@@ -1,0 +1,24 @@
+function palindrome(str) {
+  //-- The code below
+  var strRep = str.replace(/[\W_]/g,""); // This strips non alphanumeric chars and whitespace
+  var stripedVar = strRep.toLowerCase(); // This eliminates capital letter differences
+  
+  
+  var strSplit = stripedVar.split(""); // This converts the string to an array of chars
+  var arrRev = strSplit.reverse(); // This reverses the order of chars in the array
+  var strJoin = arrRev.join(""); // This converts the array of chars back into a string 
+  
+
+  // return strJoin;
+  
+  // This if statment tests to see if strJoin [The reversed striped String] and stripedVar [The normal striped String] are equal
+  if(strJoin == stripedVar){
+    return true;
+  }else{
+  return false;
+  }
+  
+}
+
+
+palindrome("123");
